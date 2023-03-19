@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='../static/css/index.css')}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+ 
+</head>
+
+<body>
+  <nav>
+    <div class="navElemContainers flexlogo">
+      <img src="{{url_for('static',filename='../static/resources/heart.png')}}">
+      <div class="logo">Heart Static</div>
+    </div>
+    <div class="navElemContainers middlenav">
+      <div class="navItem" ><a href="{{url_for('main')}}">Home</a></div>
+      <div class="navItem"><a href="#blog">Blogs</a></div>
+      <div class="navItem"><a href="{{url_for('aboutus')}}">About Us & Contact</a></div>
+      
+    </div>
+    <div class="navElemContainers">
+      <div class="button"><a href="{{url_for('logout')}}">Log Out</a></div>
+    </div>
+  </nav>
+  <div class="home">
+    <div class="subcontainer text">
+      <div class="headerline">
+        Get a health check from our <span>MAGICAL</span> Machine Learning trained model.
+      </div>
+      <div class="divider_thick"></div>
+      <div class="subtext">Welcome to our ML based model that could tell you whether your heart is still healthy or it might be on the verge of having a disease. Check out the predictor below by filling the given medical details of your body and find out the status of your heart. <br><br>Cardiovarscular diseases are increasing day by day and is now a very serious concern. Infact, the annual number of deaths from CardioVascular Disease in India is projected to rise from 2.26million(1992) to 4.77million(2020) and a large part of the population are not privileged enough to get proper tests, hence a more affordable, scalable testing system needs to be developed. <br><br></div>
+      <div class="button"><a href="#predict">Check Health</a></div>
+    </div>
+    <div class="subcontainer">
+      <img class="homeimage" src="{{url_for('static',filename='../static/resources/Cardiologist-rafiki-2.svg')}}">
+    </div>
+  </div>
+
+
+
+  <div class="newsletter" id="blog">
+    <div class="headerlinesmall">Checkout to read more about heart diseases.</div>
+        <div class="newscontainer">
+
+            <div class="newscardbig">
+              <div class="imagecard">
+                <img src="{{url_for('static',filename='../static/resources/Doctors-cuate.svg')}}">
+              </div>
+              <div class="newstile">A brief about what is heart disease?, Risk Factors, cardiac rehabilation ... </div>
+              <!-- <div class="newsdesc">subtext...</div> -->
+              <div class="buttonsmall"><a href="https://www.cdc.gov/heartdisease/about.htm"target="_blank">Read</a></div>
+            </div>
+
+            <div class="newscardsmall">
+              <div class="imagecard">
+                <img src="{{url_for('static',filename='../static/resources/Medicine-amico.svg')}}">
+              </div>
+              <div class="newstilesmall">6 Surprising Facts About Heart Disease ...</div>
+              <!-- <div class="newsdesc">subtext...</div> -->
+              <div class="buttonsmall"><a href="https://www.nghs.com/2019/11/11/6-surprising-facts-about-heart-disease"target="_blank">Read</a></div>
+            </div>
+
+            <div class="newscardbig">
+              <div class="imagecard">
+                <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
+              </div>
+              <div class="newstile">Types of heart diseases and causes ...</div>
+              <!-- <div class="newsdesc">subtext...</div> -->
+              <div class="buttonsmall"><a href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.heartandstroke.ca/heart-disease/what-is-heart-disease/types-of-heart-disease&ved=2ahUKEwjo4NiM5OX9AhWsTWwGHV11BzIQFnoECDEQAQ&usg=AOvVaw3g6KLghgUVWqcHZM6g8HLU"target="_blank">Read</a></div>
+            </div>
+
+            <div class="newscardsmall">
+              <div class="imagecard">
+                <img src="{{url_for('static',filename='../static/resources/Medicine-bro.svg')}}">
+              </div>
+              <div class="newstilesmall">Risk Factors involving Heart Diseases ... </div>
+              <!-- <div class="newsdesc">subtext...</div> -->
+              <div class="buttonsmall"><a href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.texasheart.org/heart-health/heart-information-center/topics/heart-disease-risk-factors/&ved=2ahUKEwjZ2djF3eX9AhX2wTgGHXkqDCwQFnoECBkQAQ&usg=AOvVaw3Vo0E-Dd3rW7mf7K3mB3oR"target="_blank">Read</a></div>
+            </div>
+        </div>
+        <div class="newscontainerlower">
+
+          <div class="newscardsmall">
+            <div class="imagecard">
+              <img src="{{url_for('static',filename='../static/resources/Medicine-bro.svg')}}">
+            </div>
+            <div class="newstilesmall">Burden of heart disease in India</div>
+            <!-- <div class="newsdesc">subtext...</div> -->
+            <div class="buttonsmall"><a href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.114.008729"target="_blank">Read</a></div>
+          </div>
+
+          <div class="newscardbig up30">
+            <div class="imagecard">
+              <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
+            </div>
+            <div class="newstile">Which country has the healthiest heart and why so?... </div>
+            <!-- <div class="newsdesc">subtext...</div> -->
+            <div class="buttonsmall"><a href="https://www.bbc.com/news/health-39292389#:~:text=The%20healthiest%20hearts%20in%20the,study%20in%20the%20Lancet%20showed"target="_blank">Read</a></div>
+          </div>
+
+          <div class="newscardsmall">
+            <div class="imagecard">
+              <img src="{{url_for('static',filename='../static/resources/Medicine-amico.svg')}}">
+            </div>
+            <div class="newstilesmall">Prevention from heart diseases...</div>
+            <!-- <div class="newsdesc">subtext...</div> -->
+            <div class="buttonsmall"><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi-xdPz3uX9AhUVmWYCHeKjDLYYABAAGgJzbQ&ohost=www.google.com&cid=CAESaOD2ptp9MGNSGT2f17BG0HgrvpS0Cfz4RA4djv-8rtnMVa2ownraXqykzRibac6YZPARHrbepmVatq9As-E6T_AMS1ODtZkWXTbZ9UkZYUt6_gK8WJhZYNzLww-KsmrXhnwc5pET4mgv&sig=AOD64_02_b95sTmZIp9425R2Xq0uUynkiQ&q&adurl&ved=2ahUKEwj-jc3z3uX9AhUv03MBHVL_AXsQ0Qx6BAgHEAE"target="_blank">Read</a></div>
+          </div>
+
+          <div class="newscardbig up30">
+            <div class="imagecard">
+              <img src="{{url_for('static',filename='../static/resources/Doctors-cuate.svg')}}">
+            </div>
+            <div class="newstile">BMC cardiovascular Disorders</div>
+            <!-- <div class="newsdesc">subtext...</div> -->
+            <div class="buttonsmall"><a href="https://bmccardiovascdisord.biomedcentral.com/articles"target="_blank">Read</a></div>
+          </div>
+
+        </div>
+  </div>
+ 
+  <div class="formcontainer" id="predict">
+    <div class="headerline">Predict your heart condition </div>
+    <div class="divider_thick up10 "></div>
+
+    <form action="{{ url_for('predictPage') }}" method="POST">
+
+
+      <div class="form_main_subcontainer">
+        <div class="formsubcontainer">
+
+            <div class="seperator">
+              <label for="age">Age</label>
+              <input type="text" id="age" name="age" placeholder="Your age..">
+            </div>
+            <div class="formseperator"></div>
+
+            <div class="labelspacing">
+              <label for="sex">Sex</label>
+              <select id="sex" name="sex">
+                <option selected>----select option----</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+              </select>
+            </div>
+            <div class="formseperator"></div>
+
+            <div class="labelspacing">
+              <label for="cp">Chest Pain Type</label>
+              <select id="cp" name="cp">
+                <option selected>----select option----</option>
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-anginal Pain</option>
+                <option value="3">Asymtomatic</option>
+              </select>
+            </div>
+            <div class="formseperator"></div>
+          
+            <div class="seperator">
+              <label for="trestbps">Resting Blood Pressure</label>
+              <input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg"> 
+            </div>
+            <div class="formseperator"></div>
+          
+            <div class="seperator">
+              <label for="chol">Serum Cholesterol</label>
+              <input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl">  
+            </div>
+            <div class="formseperator"></div>
+          
+            <div class="labelspacing">
+              <label for="fbs">Fasting Blood Sugar</label>
+              <select id="fbs" name="fbs">
+                <option selected>----select option----</option>
+                <option value="1">Greater than 120 mg/dl</option>
+                <option value="0">Less than 120 mg/dl</option>
+              </select>
+            </div>
+            <div class="formseperator"></div>
+            <div class="labelspacing">
+              <label for="oldpeak">Resting ECG result</br>
+              <select id="oldpeak" name="oldpeak">
+                <option selected>----select option----</option>
+                <option value="0">Normal</option>
+                <option value="1">Having ST-T wave abnormality</option>
+                <option value="2">Probable or definite left ventricular
+                hypertrophy</option>
+              </select>
+            </div>
+            <div class="formseperator"></div>
+           
+
+        </div>
+        <div class="formsubcontainer">
+
+          <div class="seperator">
+            <label for="thalach">Max Heart Rate </label>
+            <input type="text" id="thalach" name="thalach" placeholder="A number in range [71-202] bpm">
+          </div>
+          <div class="formseperator"></div>
+          
+          <div class="labelspacing">
+            <label for="exang">Exercise-induced Angina</label>
+            <select id="exang" name="exang">
+              <option selected>----select option----</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+          <div class="formseperator"></div>
+          
+          <div class="seperator">
+            <label for="slope">St depreesion induced <br>by exercise relative to rest</label>
+            <input type="text" id="slope" name="slope" placeholder="ST depression, typically in [0-6.2]">
+          </div>
+          <div class="formseperator"></div>
+          
+          <div class="labelspacing">
+            <label for="restecg">Slope of peak exercise <br>ST segment</label>
+            <select id="restecg" name="restecg">
+              <option selected>----select option----</option>
+              <option value="0">Upsloping</option>
+              <option value="1">Flat</option>
+              <option value="2">Downsloping</option>
+              
+            </select>
+          </div>
+          <div class="formseperator"></div>
+         
+          
+      
+          <div class="seperator">
+            <label for="ca">Number of Major vessels</label>
+            <input type="text" id="ca" name="ca" placeholder="Typically in [0-4]">  
+          </div>
+          <div class="formseperator"></div>
+          
+      
+          <div class="labelspacing">
+            <label for="thal">Thalassemia</label>
+            <select id="thal" name="thal">
+              <option selected>----select option----</option>
+              <option value="0">Normal</option>
+              <option value="1">Fixed Defect</option>
+              <option value="2">Reversible Defect</option>
+            </select>
+          </div>
+          <div class="formseperator"></div>
+     
+        </div>
+        <div class="formimage">
+          <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
+        </div>
+        
+      </div>
+      <input type="submit" class="btn btn-info btn-block button" value="Predict">
+    </form>
+   
+  </div>
+
+  <div class="innovation_section_divider">
+    <div class="formseperatorlong"></div>
+  </div>
+  <div class="innovation_section">
+   
+    <div class="headerinnovation">What's <span>NEXT</span>?</div>
+      
+    
+      <div class="thought_container">
+        <div class="number">1</div>
+        <div class="verticalline">
+          <div class="thought_header">A self learning MODEL!</div>
+          <div class="thought_subtext">
+            The main objective is to create a more scalable, robust and evolving model.<br>The present model we made do predict the heart disease but the input parameter at present are not completely elementary. There are a few fields for which you need a few checkups. We want to keep simplifying the input parameters so that we can reach out to more and more people and make better user-experience. We also do plan to make more such model for other disease prediction.
+          </div>
+        </div>
+        
+      </div>
+      <div class="fleximage">
+
+        <div class="imagecard_ideasec">
+          <img src="{{url_for('static',filename='../static/resources/Doctors-cuate.svg')}}">
+        </div>
+
+        <div class="thought_container2">
+          <div class="number">2</div>
+          <div class="verticalline">
+            <div class="thought_header">A self learning MODEL!</div>
+            <div class="thought_subtext2">
+              By asking user for data and adding the right ones into our model we want to increase our training data. By increasing our datset we can keep tuning the ML model. This will make our project robust scalable therby an ever evolving medical health detector/predictor which can become the first step before the costly hospital option.
+            </div>
+          </div>
+        </div>
+
+      </div>
+   
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Heart Static</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi officia doloremque magnam deserunt, accusamus deleniti sapiente laborum quis aliquam qui
+        squam voluptates dicta non animi suscipit voluptatibus beatae autem facere in.</p>
+        <ul class="socials">
+          <li><a href=""></a><i class="fa fa-facebook"></i></li>
+          <li><a href=""></a><i class="fa fa-twitter"></i></li>
+          <li><a href=""></a><i class="fa fa-google"></i></li>
+          <li><a href=""></a><i class="fa fa-youtube"></i></li>
+          <li><a href=""></a><i class="fa fa-lnkedin"></i></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2020. designed by <span><a href="https://github.com/Gaurav07076">Gaurav,</a></span><span><a href="https://github.com/samyak269"> Samyak & </a></span><span><a href=https://github.com/VaishaliRajpal28>Vaishali</a ></span> </p>
+    </div>
+
+
+  </footer>
+  <script type ="text/javascript"> 
+    window.addEventListener("scroll",function(){ 
+        var nav = document.querySelector("nav"); 
+        nav.classList.toggle("sticky",window.scrollY > 0); 
+    }) 
+  </script>
+  
+</body>
+
+</html>

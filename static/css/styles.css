@@ -1,0 +1,30 @@
+
+:root{
+    --mainred: #DA1212;
+    --mainblue: #041562; 
+    --bg-black: #232b2b;
+    --fontcolor:rgb(240, 239, 238);
+}
+.bg-nav {
+    background-color: var(--bg-black);
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-weight: 1500;
+   
+}
+h3{
+    font-weight: 600;
+}
+
+
+.mt-100{
+    margin-top: 100px;
+
+}
